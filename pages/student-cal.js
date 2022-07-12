@@ -9,7 +9,7 @@ export default function StudentDash() {
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
         <NavBar />
-        <h1>Student Dashboard </h1>    
+        <h1>Student Calandar </h1>    
     </div>
     )
 }

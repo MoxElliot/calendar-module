@@ -3,7 +3,7 @@ import CalandarView from '../components/calandar-view';
 import Head from 'next/head';
 import instructor from '../styles/instructor.module.scss';
 
-export default function InstructorDash() {
+export default function InstructorCal() {
     return (
     <div>
         <Head>

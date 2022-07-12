@@ -9,11 +9,11 @@ export default function NavBar() {
                 <Link href="/">
                     <a className={navbar.links}> Home </a>
                 </Link>
-                <Link href="/instructor-dash" >
-                    <a className={navbar.links}> Instructor Dashboard </a>
+                <Link href="/instructor-cal" >
+                    <a className={navbar.links}> Instructor Calandar </a>
                 </Link>
-                <Link href="/student-dash">
-                    <a className={navbar.links}> Student Dashboard </a>
+                <Link href="/student-cal">
+                    <a className={navbar.links}> Student Calandar </a>
                 </Link>
             </div>
         </nav>
