@@ -15,6 +15,12 @@ export default function NavBar() {
                 <Link href="/student-cal">
                     <a className={navbar.links}> Student Calandar </a>
                 </Link>
+                <Link href="/instructor-dash">
+                    <a className={navbar.links}> Instructor Dashboard </a>
+                </Link>
+                <Link href="/student-dash">
+                    <a className={navbar.links}> Student Dashboard </a>
+                </Link>
             </div>
         </nav>
     )
