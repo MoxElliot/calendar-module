@@ -1,5 +1,7 @@
-import '../styles/index.scss'
-import 'bootstrap/dist/css/bootstrap.css'
+import React from 'react';
+// import 'bootstrap';
+import '../styles/index.scss';
+
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
