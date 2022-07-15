@@ -1,4 +1,4 @@
-import instructorDash from '../styles/instructorDash.module.scss';
+import instructorDash from '../../styles/instructorDash.module.scss';
 import Link from 'next/link';
 
 

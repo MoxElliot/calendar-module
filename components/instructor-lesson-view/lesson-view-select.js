@@ -1,4 +1,4 @@
-import instructorDash from '../styles/instructorDash.module.scss';
+import instructorDash from '../../styles/instructorDash.module.scss';
 
 export default function LessonViewSelect () {
     return (    
