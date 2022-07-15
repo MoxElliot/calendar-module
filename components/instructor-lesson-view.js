@@ -5,7 +5,7 @@ import InstructorLessonTable from './instructor-lesson-table';
 import LessonViewControls from './lesson-view-controls';
 
 
-export default function InstructorLesson () {
+export default function InstructorLessonView () {
     return (
       
             <div className={instructorDash.lessonContainer}>
