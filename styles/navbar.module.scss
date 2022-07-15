@@ -1,5 +1,6 @@
 
 $primary-color: #4e10df;
+$link-color: #ffffff;
 
 .nav {
     background-color: $primary-color;
@@ -7,5 +8,8 @@ $primary-color: #4e10df;
 }
 
 .links {
-    margin-right: 5rem;
+    margin-right: 2rem;
+    font-size: 14px;
+    font-weight: bold;
+    color: $link-color;
 }
