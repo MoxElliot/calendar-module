@@ -1,7 +1,9 @@
 import NavBar from '../components/nav-bar';
 import Head from 'next/head';
 import instructorDash from '../styles/instructorDash.module.scss';
+import instructorMess from '../styles/instructorMess.module.scss';
 import InstructorLessonView from '../components/instructor-lesson-view';
+import InstructorMessageView from '../components/instructor-message-view';
 
 export default function InstructorDash() {
     return (
@@ -13,6 +15,9 @@ export default function InstructorDash() {
         <NavBar />
         <div className={instructorDash.dashContainer}>
             <InstructorLessonView />
+        </div>
+        <div className={instructorMess.dashContainer}>
+            <InstructorMessageView />
         </div>
     </div>
     )

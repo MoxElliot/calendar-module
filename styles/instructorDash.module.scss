@@ -39,13 +39,15 @@ $lessonComp-color: #3384aa;
         }
 
         .lessonTable {
-            
+            border-collapse: collapse;
             margin-bottom: .5rem;
               th {
+                padding: .1rem;
                 border: 1px solid black;
               }
                 
               td {
+                padding: .1rem;
                 text-align: center;
                 border: 1px solid black;
               }
