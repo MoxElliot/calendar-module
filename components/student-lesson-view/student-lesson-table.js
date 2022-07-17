@@ -1,4 +1,4 @@
-import instructorLess from '../../styles/instructorLess.module.scss';
+import studentLess from '../../styles/studentLess.module.scss';
 import Link from 'next/link';
 
 
@@ -9,10 +9,10 @@ const lessonDataArr = [
     {id:4,date: "xx/xx/xxx at xx:xx", status:"Booked", detail:"Arma virumque canō, Trōiae quī prīmus ab ōrīs", attachment:"Lāvīniaque.sgf", name:"Student name", link:"Discord"}
 ]
 
-export default function InstructorLessonTable () {
+export default function StudentLessonTable () {
     return (
-        <div className={instructorLess.lessonTableContainer}>
-            <table className={instructorLess.lessonTable}>
+        <div className={studentLess.lessonTableContainer}>
+            <table className={studentLess.lessonTable}>
             <tbody>
                 <tr>
                     <th>Lesson Date</th>

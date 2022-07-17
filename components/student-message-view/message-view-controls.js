@@ -1,16 +1,16 @@
-import instructorMess from '../../styles/instructorMess.module.scss';
+import studentMess from '../../styles/studentMess.module.scss';
 
 export default function MessageViewControls() {
 
     return (
-        <div className={instructorMess.messageViewControlContainer}>
-            <form className={instructorMess.messageViewControl}>
-                <div className={instructorMess.messageViewSubmitContainer}>
-                    <button className={instructorMess.messageViewSubmit}>
+        <div className={studentMess.messageViewControlContainer}>
+            <form className={studentMess.messageViewControl}>
+                <div className={studentMess.messageViewSubmitContainer}>
+                    <button className={studentMess.messageViewSubmit}>
                         Delete Message
                     </button>
                 </div>
-                <div className={instructorMess.showMessageDD}>
+                <div className={studentMess.showMessageDD}>
                     <div><p>Arr0</p></div>
                     <select name="showMessage" id="showMessage">
                         <option value="Show 5 Messages" selected>Show 5 Messages</option>
@@ -21,7 +21,7 @@ export default function MessageViewControls() {
                     <div>
                         <p>Arr0</p>
                     </div>
-                    <div className={instructorMess.showMessagePageDisplay}>
+                    <div className={studentMess.showMessagePageDisplay}>
                     <p>Page 1 of 3</p>
                     </div>
                 </div>

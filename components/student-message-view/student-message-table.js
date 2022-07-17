@@ -1,4 +1,6 @@
-import instructorMess from '../../styles/instructorMess.module.scss';
+import studentMess from '../../styles/studentMess.module.scss';
+
+
 
 const MessageDataArr = [
     {id:1, date: "xx/xx/xxx at xx:xx", name:"Student name", subject:"Review Tournament Games", message:"<Unread> Arma virumque canō, Trōiae quī prīmus ab ōrīs"},
@@ -7,10 +9,10 @@ const MessageDataArr = [
     {id:4,date: "xx/xx/xxx at xx:xx", name:"Student name", subject:"Play w/ 35pt komi", message:"<Unread> Arma virumque canō, Trōiae quī prīmus ab ōrīs"}
 ]
 
-export default function InstructorMessageTable () {
+export default function StudentMessageTable () {
     return (
-        <div className={instructorMess.messageTableContainer}>
-            <table className={instructorMess.messageTable}>
+        <div className={studentMess.messageTableContainer}>
+            <table className={studentMess.messageTable}>
             <tbody>
                 <tr>
                     <th>Message Date</th>

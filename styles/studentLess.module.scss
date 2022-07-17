@@ -3,13 +3,12 @@ $lessonView-color: #3fb427;
 $lessonComp-color: #3384aa;
 
 .dashContainer {
-    
     display: flex;
     justify-content: center;
     margin-top: 1rem;
     padding-bottom: 1rem;
+    margin-bottom: 4rem;
 
-    
     .lessonContainer {
         background-color: $lessonView-color;
         width: 90%;

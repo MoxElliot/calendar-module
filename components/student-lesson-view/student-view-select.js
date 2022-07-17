@@ -1,9 +1,9 @@
-import instructorLess from '../../styles/instructorLess.module.scss';
+import studentLess from '../../styles/studentLess.module.scss';
 
 export default function LessonViewSelect () {
     return (    
-        <div className={instructorLess.radioContainer}>
-            <form className={instructorLess.radioForm}>
+        <div className={studentLess.radioContainer}>
+            <form className={studentLess.radioForm}>
                 <label>
                     <input  type='radio'
                             value='Show All'
