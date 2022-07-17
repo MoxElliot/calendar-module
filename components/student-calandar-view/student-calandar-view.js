@@ -1,6 +1,6 @@
 import React from 'react';
-import studentCal from '../styles/studentCal.module.scss';
-import StudCalandarDay from './student-calandar-view/studCal-day';
+import studentCal from '../../styles/studentCal.module.scss';
+import StudCalandarDay from './studCal-day';
 
 
 const weekDaysArr = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];

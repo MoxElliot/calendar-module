@@ -1,9 +1,8 @@
-import instructorMess from '../styles/instructorMess.module.scss';
+import instructorMess from '../../styles/instructorMess.module.scss';
 import React from 'react';
-import MessageViewSelect from './instructor-message-view/message-view-select';
-import InstructormessageTable from './instructor-message-view/instructor-message-table';
-import MessageViewControls from './instructor-message-view/message-view-controls';
-
+import MessageViewSelect from './message-view-select';
+import InstructormessageTable from './instructor-message-table';
+import MessageViewControls from './message-view-controls';
 
 export default function InstructorMessageView () {
     return (
@@ -19,7 +18,6 @@ export default function InstructorMessageView () {
                 <div className={instructorMess.messageControl}>
                     <MessageViewControls />
                 </div>
-
             </div>
     )
 }

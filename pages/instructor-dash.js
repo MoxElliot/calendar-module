@@ -2,8 +2,8 @@ import NavBar from '../components/nav-bar';
 import Head from 'next/head';
 import instructorLess from '../styles/instructorLess.module.scss';
 import instructorMess from '../styles/instructorMess.module.scss';
-import InstructorLessonView from '../components/instructor-lesson-view';
-import InstructorMessageView from '../components/instructor-message-view';
+import InstructorLessonView from '../components/instructor-lesson-view/instructor-lesson-view';
+import InstructorMessageView from '../components/instructor-message-view/instructor-message-view';
 
 export default function InstructorDash() {
     return (

@@ -1,5 +1,5 @@
 import NavBar from '../components/nav-bar';
-import InstCalandarView from '../components/instructor-calandar-view';
+import InstCalandarView from '../components/instructor-calandar-view/instructor-calandar-view';
 import Head from 'next/head';
 import instructor from '../styles/instructor.module.scss';
 

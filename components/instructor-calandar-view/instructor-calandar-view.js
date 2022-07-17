@@ -1,7 +1,7 @@
 import React from 'react';
-import instructorCal from '../styles/instructorCal.module.scss';
-import InstCalandarDay from './instructor-calandar-view/instCal-day';
-import LessonCalControl from './instructor-calandar-view/lesson-calandar-control';
+import instructorCal from '../../styles/instructorCal.module.scss';
+import InstCalandarDay from './instCal-day';
+import LessonCalControl from './lesson-calandar-control';
 
 const weekDaysArr = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 

@@ -2,8 +2,8 @@ import NavBar from '../components/nav-bar';
 import Head from 'next/head';
 import studentLess from '../styles/studentLess.module.scss';
 import studentMess from '../styles/studentMess.module.scss';
-import StudentLessonView from '../components/student-lesson-view';
-import StudentMessageView from '../components/student-message-view';
+import StudentLessonView from '../components/student-lesson-view/student-lesson-view';
+import StudentMessageView from '../components/student-message-view/student-message-view';
 
 export default function StudentDash() {
     return (

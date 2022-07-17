@@ -1,8 +1,8 @@
-import studentMess from '../styles/studentMess.module.scss';
+import studentMess from '../../styles/studentMess.module.scss';
 import React from 'react';
-import MessageViewSelect from './student-message-view/message-view-select';
-import StudentMessageTable from './student-message-view/student-message-table';
-import MessageViewControls from './student-message-view/message-view-controls';
+import MessageViewSelect from './message-view-select';
+import StudentMessageTable from './student-message-table';
+import MessageViewControls from './message-view-controls';
 
 
 export default function StudentMessageView () {
