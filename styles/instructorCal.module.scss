@@ -13,7 +13,7 @@ $calItemInner-color: #c9328f;
     align-items: center;
     justify-content: center;
     width: 80vw;
-    height: 70vh;
+    height: 85vh;
     
     .weekContainer {
         display:flex;
@@ -61,6 +61,8 @@ $calItemInner-color: #c9328f;
         width: 90%;
         height: 35%;
         margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
         .lessonControl {
             background-color: $calItem-color;
             width: 50%;

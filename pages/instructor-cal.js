@@ -4,6 +4,7 @@ import Head from 'next/head';
 import instructor from '../styles/instructor.module.scss';
 
 export default function InstructorCal() {
+    
     return (
     <div>
         <Head>
@@ -13,6 +14,7 @@ export default function InstructorCal() {
         <NavBar />
         <div className={instructor.instContainer}>
             <InstCalandarView />
+            
         </div>
     </div>
     )
