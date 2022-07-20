@@ -39,11 +39,11 @@ const InstCalandarView = () => {
         return (
             <div className={instructorCal.calContainer}>
                 <div className={instructorCal.dateSlide}>
-                    <div>aro</div>
-                    <div className={instructorCal.slideText}>
-                        <p>Week of August 7th</p>
-                    </div>
-                    <div>aro</div>
+                    <button>aro</button>
+                    <label className={instructorCal.slideText}>
+                        Week of August 7th
+                    </label>
+                    <button>aro</button>
                 </div>
                 <div className={instructorCal.weekContainer}>
                     {weekDays}
