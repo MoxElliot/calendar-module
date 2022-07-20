@@ -10,7 +10,7 @@ export default function InstructorLessonView () {
       
             <div className={instructorLess.lessonContainer}>
                 <div className={instructorLess.viewSelect}>
-                    <p className={instructorLess.lessonViewSelectHeader}> Lesson View </p>
+                    <p className={instructorLess.lessonViewSelectHeader}>Instructor Lesson View </p>
                     <LessonViewSelect />
                 </div>
                 <div className={instructorLess.lessonTable}>

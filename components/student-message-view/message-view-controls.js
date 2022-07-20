@@ -13,7 +13,7 @@ export default function MessageViewControls() {
                 <div className={studentMess.showMessageDD}>
                     <div><p>Arr0</p></div>
                     <select name="showMessage" id="showMessage">
-                        <option value="Show 5 Messages" selected>Show 5 Messages</option>
+                        <option defaultValue="Show 5 Messages">Show 5 Messages</option>
                         <option value="Show 10 Messages">Show 10 Messages</option>
                         <option value="Show 15 Messages">Show 15 Messages</option>
                         <option value="Show 20 Messages">Show 20 Messages</option>

@@ -8,7 +8,7 @@ export default function StudentLessonView () {
       
             <div className={studentLess.lessonContainer}>
                 <div className={studentLess.viewSelect}>
-                    <p className={studentLess.lessonViewSelectHeader}> Lesson View </p>
+                    <p className={studentLess.lessonViewSelectHeader}>Student Lesson View </p>
                     <LessonViewSelect />
                 </div>
                 <div className={studentLess.lessonTable}>

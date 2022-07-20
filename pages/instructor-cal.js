@@ -14,7 +14,6 @@ export default function InstructorCal() {
         <NavBar />
         <div className={instructor.instContainer}>
             <InstCalandarView />
-            
         </div>
     </div>
     )

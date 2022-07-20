@@ -9,7 +9,7 @@ const lessonDataArr = [
     {id:4,date: "xx/xx/xxx at xx:xx", status:"Booked", detail:"Arma virumque canō, Trōiae quī prīmus ab ōrīs", attachment:"Lāvīniaque.sgf", name:"Student name", link:"Discord"}
 ]
 
-export default function InstructorLessonTable () {
+export default function InstructorLessonTable({handleMessageDetails}) {
     return (
         <div className={instructorLess.lessonTableContainer}>
             <table className={instructorLess.lessonTable}>
@@ -30,7 +30,7 @@ export default function InstructorLessonTable () {
                             <td>{val.detail}</td>
                             <td>{val.attachment}</td>
                             <td>{val.name}</td>
-                            <td><Link href="https://www.discord.com" target="_blank">{val.link}</Link></td>
+                            <td>{val.link}</td>
                         </tr>
                     )
                 })}

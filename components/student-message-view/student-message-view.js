@@ -10,7 +10,7 @@ export default function StudentMessageView () {
       
             <div className={studentMess.messageContainer}>
                 <div className={studentMess.viewSelect}>
-                    <p className={studentMess.messageViewSelectHeader}> Message View </p>
+                    <p className={studentMess.messageViewSelectHeader}> Student Message View </p>
                     <MessageViewSelect />
                 </div>
                 <div className={studentMess.messageTable}>

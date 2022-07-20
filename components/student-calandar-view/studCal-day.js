@@ -6,7 +6,12 @@ const timeSlotsArr = ["1:00", "2:00", "3:00", "4:00", "5:00"]
 export default function StudCalandarDay() {
 
     const timeSlots = timeSlotsArr.map((timeSlot) => 
-        <button className={studentCal.timeSlot}>{timeSlot}</button>
+        <button 
+            className={studentCal.timeSlot}
+            key={timeSlot.toString()}
+        >
+            {timeSlot}
+        </button>
     );
 
     return (

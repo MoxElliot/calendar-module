@@ -6,7 +6,7 @@ import LessonCalControl from './lesson-calandar-control';
 
 const weekDaysArr = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-const InstCalandarView = ({handleLessonDet}) => {
+const InstCalandarView = () => {
 
     const [showLessonDet, setShowLessonDet] = useState(false);
 
@@ -50,7 +50,7 @@ const InstCalandarView = ({handleLessonDet}) => {
                 </div>
                 <div className={instructorCal.controlContainer}>
                 <LessonCalControl className={instructorCal.lessonControl}/>
-                <InstructorLessonDetail lessonDet={showLessonDet}/>
+                <InstructorLessonDetail showLessonDet={showLessonDet}/>
                 </div>
             </div>
         )

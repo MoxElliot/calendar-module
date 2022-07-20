@@ -9,7 +9,7 @@ export default function InstructorMessageView () {
       
             <div className={instructorMess.messageContainer}>
                 <div className={instructorMess.viewSelect}>
-                    <p className={instructorMess.messageViewSelectHeader}> Message View </p>
+                    <p className={instructorMess.messageViewSelectHeader}>Instructor Message View </p>
                     <MessageViewSelect />
                 </div>
                 <div className={instructorMess.messageTable}>
