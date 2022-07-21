@@ -11,13 +11,16 @@ export const messageDataSlice = createSlice({
         {id:4,date: "xx/xx/xxx at xx:xx", name:"Student name", subject:"Play w/ 35pt komi", message:"<Unread> Arma virumque canō, Trōiae quī prīmus ab ōrīs"}
     ],
     reducers: {
-        addMessageData: (state, action) => {
-            const messageData = {
+        addNewMessageData: (state, action) => {
+            const newMessageData = {
                 id: new Message(),
+                date: action.payload.date,
+                name: action.payload.name,
                 subject: action.payload.subject,
+                message: action.payload.message,
                 read: false,
             };
-            state.push(messageData)
+            state.push(newMessageData)
         },
     },
 });

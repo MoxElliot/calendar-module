@@ -1,15 +1,8 @@
+import { useSelector } from 'react-redux';
 import instructorLess from '../../styles/instructorLess.module.scss';
-import Link from 'next/link';
 
-
-const lessonDataArr = [
-    {id:1, date: "xx/xx/xxx at xx:xx", status:"Booked", detail:"Arma virumque canō, Trōiae quī prīmus ab ōrīs", attachment:"Lāvīniaque.sgf", name:"Student name", link:"Discord"},
-    {id:2, date: "xx/xx/xxx at xx:xx", status:"Booked", detail:"Arma virumque canō, Trōiae quī prīmus ab ōrīs", attachment:"Lāvīniaque.sgf", name:"Student name", link:"Discord"},
-    {id:3, date: "xx/xx/xxx at xx:xx", status:"Requested", detail:"Arma virumque canō, Trōiae quī prīmus ab ōrīs", attachment:"Lāvīniaque.sgf", name:"Student name", link:"Discord"},
-    {id:4,date: "xx/xx/xxx at xx:xx", status:"Booked", detail:"Arma virumque canō, Trōiae quī prīmus ab ōrīs", attachment:"Lāvīniaque.sgf", name:"Student name", link:"Discord"}
-]
-
-export default function InstructorLessonTable({handleMessageDetails}) {
+export default function InstructorLessonTable() {
+    const lessonData = useSelector((state) => state.lessonData)
     return (
         <div className={instructorLess.lessonTableContainer}>
             <table className={instructorLess.lessonTable}>
@@ -22,7 +15,7 @@ export default function InstructorLessonTable({handleMessageDetails}) {
                     <th>Student Name</th>
                     <th>Discord Link</th>
                 </tr>
-                {lessonDataArr.map((val) => {
+                {lessonData.map((val) => {
                     return (
                         <tr key={val.id}>
                             <td>{val.date}</td>

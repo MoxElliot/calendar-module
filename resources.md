@@ -11,5 +11,7 @@ https://stackoverflow.com/questions/37771316/react-triggering-click-event-on-tab
 https://blog.bitsrc.io/build-a-simple-modal-component-with-react-16decdc111a6
 **Redux in NextJS**
 https://medium.com/how-to-react/how-to-setup-redux-in-nextjs-5bce0d82b8de
+https://vpilip.com/how-setup-nextjs-with-redux-and-redux-debuger/
+https://github.com/VladymyrPylypchatin/nextjs-redux-boilerplate/blob/master/src/pages/_app.js
 **Redux Setup FCC**
 https://www.freecodecamp.org/news/redux-for-beginners-the-brain-friendly-guide-to-redux/
