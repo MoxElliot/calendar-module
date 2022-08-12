@@ -1,11 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import newMessageDataReducer from './messageDataSlice';
-import lessonDataReducer from './lessonDataSlice';
-
+import rootReducer from './reducers/rootReducer'
 
 export const store = configureStore({
-  reducer: {
-    messageData: newMessageDataReducer,
-    lessonData: lessonDataReducer
-  },
+  reducer: rootReducer,
 });
