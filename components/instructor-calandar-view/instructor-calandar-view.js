@@ -4,7 +4,7 @@ import InstCalandarDay from './instCal-day';
 import InstructorLessonDetail from '../instructor-lesson-detail/instructor-lesson-detail';
 import LessonCalControl from './lesson-calandar-control';
 import { useSelector, useDispatch } from 'react-redux';
-import { nextWeek, lastWeek, advanceMonth, advanceYear } from '../../redux/weekNavSlice'
+import { nextWeek, lastWeek, advanceMonth, advanceYear } from '../../redux/slices/weekNavSlice'
 
 
 const weekDaysArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -31,7 +31,6 @@ const InstCalandarView = () => {
     const year = useSelector(state => state.weekNav.year)
     const dispatch = useDispatch()
     
-        
     const weekDays = weekDaysArr.map(function(day) {
    
         const d = new Date();
@@ -49,34 +48,34 @@ const InstCalandarView = () => {
 
             if (weekDaysArr.indexOf(day) === dayNum) {  // For today
                 const today = baseDay 
-                console.log("today", today)
-                return today
+                if(today > daysInMonth(month)) {
+                    today -= daysInMonth(month)
+                }
 
-            } else if (weekDaysArr.indexOf(day) > dayNum) {  //For all days ahead of today
+                return today
+            } else if (weekDaysArr.indexOf(day) > dayNum || baseDay > daysInMonth(month)) {  //For all days ahead of today
                 const daysAhead = dateAdjust
-                console.log("daysAhead", daysAhead)
                 if (daysAhead > daysInMonth(month)) { //At the end of the month when the days ahead of today are in the next month
                     daysAhead = daysAhead - daysInMonth(month) //the month is accurate
+
                     return daysAhead
                 }
-                
-
                 return daysAhead
-            } else if (weekDaysArr.indexOf(day) < dayNum) { //For all days behind today
+            } else if (weekDaysArr.indexOf(day) < dayNum || baseDay < 0  ) { //For all days behind today
                 const daysBehind = dateAdjust
-                console.log("daysBehind", daysBehind)
+
                 if (daysBehind <= 0) { //At the beginning of the month when the days behind today are in the last month 
                     daysBehind += daysInMonth(month-1) //the month is accurate so last month is -1
+
                     return daysBehind
                 }
                 return daysBehind
             }
-            
-            
+        
         }
-       console.log(dayOfWeek())
+       
         useEffect(() => {
-            if(dayOfWeek() > daysInMonth(month) && dispatchCheck > 0){ //month is accurate
+            if(baseDay > daysInMonth(month) && dispatchCheck > 0){ //month is accurate
                 dispatch(advanceMonth(1));
                 dispatch(advanceYear(1));
                 dispatchCheck=0;
@@ -100,7 +99,7 @@ const InstCalandarView = () => {
             <div className={instructorCal.dateSlide}>
                 <button
                     onClick={() =>{
-                        dispatch(lastWeek(7))
+                        dispatch(lastWeek())
                         dispatchCheck = -1;
                         return dispatchCheck;
                         }
