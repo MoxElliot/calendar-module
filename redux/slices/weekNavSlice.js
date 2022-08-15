@@ -53,7 +53,7 @@ const weekNavSlice = createSlice({
                 state.year = newPastYear
                 state.pastYearArr = lastYear
             } else {
-                console.log("This is the END")
+                alert("This is the END")
             }
          },
         advanceMonth(state, action){
