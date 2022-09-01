@@ -26,9 +26,25 @@ $calItemInner-color: #c9328f;
         justify-content: space-evenly;
 
         .dayContainer {
+            display:flex;
+            flex-direction: column;
             background-color: $calItem-color;
             height:90%;
-            flex-basis: 13%
+            flex-basis: 13%;
+
+            .dateTextContainer {
+            display:flex;
+            flex-direction: row;
+            background-color: $calComponent-color;
+            justify-content: space-between;
+                .dayText {
+                    margin-left: .5rem;
+                }
+                .dateText {
+                    margin-right: .2rem;
+                }
+            }
+
         }
         .calDay {
             display:flex;
@@ -41,6 +57,11 @@ $calItemInner-color: #c9328f;
                 margin-bottom: .3rem;
             }
         }
+        .slideText {
+            display: flex;
+            align-items: center;
+            padding: .3rem;
+        }
     }
 
     .dateSlide {
@@ -49,11 +70,7 @@ $calItemInner-color: #c9328f;
         display: flex;
         justify-content:space-evenly;
         align-items: center;
-        .slideText {
-            display: flex;
-            align-items: center;
-            padding: .3rem;
-        }
+        
     }
     
     .controlContainer {

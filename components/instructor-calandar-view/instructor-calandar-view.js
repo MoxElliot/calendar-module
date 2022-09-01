@@ -87,8 +87,17 @@ const InstCalandarView = () => {
             className={instructorCal.dayContainer} 
             key={day.toString()}
         >
-            {day}{dayOfWeek()}
+            <div className={instructorCal.dateTextContainer}>
+                    <div className={instructorCal.dayText}>
+                        {day} 
+                    </div>
+                    <div className={instructorCal.dateText}>
+                        {dayOfWeek()}
+                    </div>
+            </div>
+            <div>
             <InstCalandarDay handleLessonDet={handleLessonDet}/>
+            </div>
         </div>
         )
     }
@@ -98,33 +107,33 @@ const InstCalandarView = () => {
     return (
         <div className={instructorCal.calContainer}>
             <div className={instructorCal.dateSlide}>
+                
+                <label className={instructorCal.slideText}>
+                    {baseDay}
+                </label>
+                
+                <label>{monthArr[month]} {year}</label>
+            </div>
+            <div className={instructorCal.weekContainer}>
                 <button
                     onClick={() =>{
                         dispatch(lastWeek())
                         dispatchCheck = -1;
                         return dispatchCheck;
-                        }
-                    }
+                        }}
                 >
-                    aro
+                    <h1>&lt;</h1>
                 </button>
-                <label className={instructorCal.slideText}>
-                    {baseDay}
-                </label>
+                {weekDays}
                 <button 
                     onClick={() =>{
                         dispatch(nextWeek(7))
                         dispatchCheck = 1;
                         return dispatchCheck;
-                        } 
-                    }
+                        }}
                 >
-                    aro
+                    <h1>&gt;</h1>
                 </button>
-                <label>{monthArr[month]} {year}</label>
-            </div>
-            <div className={instructorCal.weekContainer}>
-                {weekDays}
             </div>
             <div className={instructorCal.controlContainer}>
             <InstructorLessonDetail showLessonDet={showLessonDet}/>
