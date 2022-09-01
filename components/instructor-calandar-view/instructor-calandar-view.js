@@ -2,7 +2,6 @@ import React, { useState, useEffect} from 'react';
 import instructorCal from '../../styles/instructorCal.module.scss';
 import InstCalandarDay from './instCal-day';
 import InstructorLessonDetail from '../instructor-lesson-detail/instructor-lesson-detail';
-import LessonCalControl from './lesson-calandar-control';
 import { useSelector, useDispatch } from 'react-redux';
 import { nextWeek, lastWeek, advanceMonth, advanceYear } from '../../redux/slices/weekNavSlice'
 
@@ -16,15 +15,15 @@ const InstCalandarView = () => {
     const [showLessonDet, setShowLessonDet] = useState(false);
 
     const handleLessonDet = (e) => {
+            console.log("in handleLessonDet")
             e.preventDefault();
-            setShowLessonDet((showLessonDet) =>{
-              
+       
                 if(showLessonDet) {
                     setShowLessonDet(false)
                 } else {
                     setShowLessonDet(true)
-                }
-            });
+                };
+            
     }
 
     const baseDay = useSelector(state => state.weekNav.baseDay)
@@ -90,8 +89,9 @@ const InstCalandarView = () => {
         >
             {day}{dayOfWeek()}
             <InstCalandarDay handleLessonDet={handleLessonDet}/>
-        </div>)
-        }
+        </div>
+        )
+    }
         
         );
    
