@@ -1,6 +1,6 @@
-import util from '../styles/util.module.scss';
-import NavBar from '../components/nav-bar';
 import Head from 'next/head';
+import InstCalandarView from '../components/instructor-calandar-view/instructor-calandar-view';
+import instructor from '../styles/instructor.module.scss';
 
 export default function Home() {
   return (
@@ -8,9 +8,10 @@ export default function Home() {
       <Head>
             <title>Home Page</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        </Head>
-    <NavBar />
-    <h1>Hello</h1>
+      </Head>
+      <div className={instructor.instContainer}>
+        <InstCalandarView />
+      </div>
     </div>
   )
 }
