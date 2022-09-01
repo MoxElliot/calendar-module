@@ -127,7 +127,6 @@ const InstCalandarView = () => {
                 {weekDays}
             </div>
             <div className={instructorCal.controlContainer}>
-            <LessonCalControl className={instructorCal.lessonControl}/>
             <InstructorLessonDetail showLessonDet={showLessonDet}/>
             </div>
         </div>
