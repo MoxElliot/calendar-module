@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import instructorCal from '../../styles/instructorCal.module.scss';
+
 import InstCalandarDay from './instCal-day';
 import InstructorLessonDetail from '../instructor-lesson-detail/instructor-lesson-detail';
 import { useSelector, useDispatch } from 'react-redux';
@@ -84,20 +84,15 @@ const InstCalandarView = () => {
 
         return (
         <div 
-            className={instructorCal.dayContainer} 
+            className="col border "
             key={day.toString()}
         >
-            <div className={instructorCal.dateTextContainer}>
-                    <div className={instructorCal.dayText}>
-                        {day} 
-                    </div>
-                    <div className={instructorCal.dateText}>
-                        {dayOfWeek()}
-                    </div>
+            <div className="badge bg-primary">
+                {day} {dayOfWeek()}
             </div>
-            <div>
+          
             <InstCalandarDay handleLessonDet={handleLessonDet}/>
-            </div>
+        
         </div>
         )
     }
@@ -105,37 +100,38 @@ const InstCalandarView = () => {
         );
    
     return (
-        <div className={instructorCal.calContainer}>
-            <div className={instructorCal.dateSlide}>
-                
-                <label className={instructorCal.slideText}>
-                    {baseDay}
-                </label>
-                
-                <label>{monthArr[month]} {year}</label>
+        <div className="container">
+            <div className="row-12 m-2 d-flex align-items-center justify-content-center">
+                <div className="badge bg-primary">
+                    {monthArr[month]} {year}
+                </div>
             </div>
-            <div className={instructorCal.weekContainer}>
-                <button
-                    onClick={() =>{
-                        dispatch(lastWeek())
-                        dispatchCheck = -1;
-                        return dispatchCheck;
-                        }}
-                >
-                    <h1>&lt;</h1>
-                </button>
+            <div className="row">
+                <div className="col gx-0 d-flex flex-row-reverse">
+                    <button
+                        onClick={() =>{
+                            dispatch(lastWeek())
+                            dispatchCheck = -1;
+                            return dispatchCheck;
+                            }}
+                    >
+                        <h1>&lt;</h1>
+                    </button>
+                </div>
                 {weekDays}
-                <button 
-                    onClick={() =>{
-                        dispatch(nextWeek(7))
-                        dispatchCheck = 1;
-                        return dispatchCheck;
-                        }}
-                >
-                    <h1>&gt;</h1>
-                </button>
+                <div className="col gx-0 d-flex flex-row">
+                    <button 
+                        onClick={() =>{
+                            dispatch(nextWeek(7))
+                            dispatchCheck = 1;
+                            return dispatchCheck;
+                            }}
+                    >
+                        <h1>&gt;</h1>
+                    </button>
+                </div>
             </div>
-            <div className={instructorCal.controlContainer}>
+            <div className="">
             <InstructorLessonDetail showLessonDet={showLessonDet}/>
             </div>
         </div>
