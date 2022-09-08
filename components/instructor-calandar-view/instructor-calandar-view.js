@@ -84,7 +84,7 @@ const InstCalandarView = () => {
 
         return (
         <div 
-            className="col border "
+            className="col border"
             key={day.toString()}
         >
             <div className="badge bg-primary">
