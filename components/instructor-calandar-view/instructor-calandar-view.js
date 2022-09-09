@@ -100,35 +100,39 @@ const InstCalandarView = () => {
         );
    
     return (
-        <div className="container">
-            <div className="calendar-date-label row-12 m-2 d-flex align-items-center justify-content-center text-center">
-                <p className="badge bg-primary w-25 h-100 fs-4">
-                    {monthArr[month]} {year}
-                </p>
-            </div>
-            <div className="d-flex row">
-                <div className="col-1 gx-0 d-flex flex-row-reverse ">
-                    <button
+        <div className="container p-3">
+            
+            <div className="calendar-date-label row-12 d-flex justify-content-center">
+                <div className="col col-1 d-flex m-0 justify-content-end">
+                    <button className='btn btn-secondary p-0 m-0 fs-4 w-25'
                         onClick={() =>{
                             dispatch(lastWeek())
                             dispatchCheck = -1;
                             return dispatchCheck;
                             }}
                     >
-                        <h1>&lt;</h1>
+                        <p>&lt;</p>
                     </button>
                 </div>
-                {weekDays}
-                <div className="col-1 gx-0 d-flex flex-row">
-                    <button 
-                        onClick={() =>{
-                            dispatch(nextWeek(7))
-                            dispatchCheck = 1;
-                            return dispatchCheck;
-                            }}
-                    >
-                        <h1>&gt;</h1>
+                <p className="col col-2 badge bg-primary m-0 p-0 h-100 fs-3">
+                    {monthArr[month]} {year}
+                </p>
+                <div className='col col-1 d-flex m-0'>
+                    <button className='btn btn-secondary p-0 m-0 fs-4 w-25'
+                            onClick={() =>{
+                                dispatch(nextWeek(7))
+                                dispatchCheck = 1;
+                                return dispatchCheck;
+                                }}
+                        >
+                        <p>&gt;</p>
                     </button>
+                </div>
+            </div>
+    
+            <div className="container">
+                <div className='row'>
+                {weekDays}
                 </div>
             </div>
             <div className="">
