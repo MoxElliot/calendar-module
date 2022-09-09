@@ -12,17 +12,17 @@ export default function InstCalandarDay({handleLessonDet}) {
     
 
     const timeSlots = timeSlotsArr.map((timeSlot) => 
-        <div
-        className="btn btn-secondary my-1" 
+        <button
+        className="btn btn-secondary my-1 w-100" 
             key={timeSlot.toString()}
             onClick={handleLessonDet}
         >
             {timeSlot}
-        </div>
+        </button>
     );
 
     return (
-        <div className="">
+        <div className="d-flex-row text-center">
             {timeSlots}
         </div>
     )

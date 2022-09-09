@@ -84,10 +84,10 @@ const InstCalandarView = () => {
 
         return (
         <div 
-            className="col border"
+            className="col border d-flex-row text-center"
             key={day.toString()}
         >
-            <div className="badge bg-primary">
+            <div className="badge bg-primary w-100 day-date-label fs-6">
                 {day} {dayOfWeek()}
             </div>
           
@@ -101,13 +101,13 @@ const InstCalandarView = () => {
    
     return (
         <div className="container">
-            <div className="row-12 m-2 d-flex align-items-center justify-content-center">
-                <div className="badge bg-primary">
+            <div className="calendar-date-label row-12 m-2 d-flex align-items-center justify-content-center text-center">
+                <p className="badge bg-primary w-25 h-100 fs-4">
                     {monthArr[month]} {year}
-                </div>
+                </p>
             </div>
-            <div className="row">
-                <div className="col gx-0 d-flex flex-row-reverse">
+            <div className="d-flex row">
+                <div className="col-1 gx-0 d-flex flex-row-reverse ">
                     <button
                         onClick={() =>{
                             dispatch(lastWeek())
@@ -119,7 +119,7 @@ const InstCalandarView = () => {
                     </button>
                 </div>
                 {weekDays}
-                <div className="col gx-0 d-flex flex-row">
+                <div className="col-1 gx-0 d-flex flex-row">
                     <button 
                         onClick={() =>{
                             dispatch(nextWeek(7))
