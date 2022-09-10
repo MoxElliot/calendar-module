@@ -7,8 +7,8 @@ export default function InstructorLessonDetail({showLessonDet}) {
     } 
 
     return (
-        <div className="">
-            <div>
+        <div className="lesson-details">
+            <div >
                 <h4>Time Slot Details</h4>
             </div>
         </div>

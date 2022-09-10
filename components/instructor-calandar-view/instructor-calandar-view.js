@@ -84,7 +84,7 @@ const InstCalandarView = () => {
 
         return (
         <div 
-            className="col border d-flex-row text-center"
+            className="col-lg border text-center"
             key={day.toString()}
         >
             <div className="badge bg-primary w-100 day-date-label fs-6">
@@ -100,10 +100,10 @@ const InstCalandarView = () => {
         );
    
     return (
-        <div className="container p-3">
+        <div className="app container-md block p-3">
             
             <div className="calendar-date-label row-12 d-flex justify-content-center">
-                <div className="col col-1 d-flex m-0 justify-content-end">
+                <div className="col col-lg-1 col-sm-2 d-flex m-0 justify-content-end">
                     <button className='btn btn-secondary p-0 m-0 fs-4 w-25'
                         onClick={() =>{
                             dispatch(lastWeek())
@@ -114,10 +114,10 @@ const InstCalandarView = () => {
                         <p>&lt;</p>
                     </button>
                 </div>
-                <p className="col col-2 badge bg-primary m-0 p-0 h-100 fs-3">
+                <p className="col col-lg-2 col-md-3 col-4 badge bg-primary m-0 p-0 h-100 fs-3">
                     {monthArr[month]} {year}
                 </p>
-                <div className='col col-1 d-flex m-0'>
+                <div className='col col-lg-1 col-sm-2 d-flex m-0'>
                     <button className='btn btn-secondary p-0 m-0 fs-4 w-25'
                             onClick={() =>{
                                 dispatch(nextWeek(7))
@@ -130,13 +130,13 @@ const InstCalandarView = () => {
                 </div>
             </div>
     
-            <div className="container">
-                <div className='row'>
+            <div className="container  ">
+                <div className='calendar-container row overflow-auto'>
                 {weekDays}
                 </div>
-            </div>
-            <div className="">
-            <InstructorLessonDetail showLessonDet={showLessonDet}/>
+                <div className="row">
+                <InstructorLessonDetail showLessonDet={showLessonDet}/>
+                </div>
             </div>
         </div>
         )
