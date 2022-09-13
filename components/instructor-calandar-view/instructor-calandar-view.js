@@ -84,11 +84,13 @@ const InstCalandarView = () => {
 
         return (
         <div 
-            className="col-lg border text-center"
+            className="col-md-3 col-xl border text-center p-2"
             key={day.toString()}
         >
-            <div className="badge bg-primary w-100 day-date-label fs-6">
-                {day} {dayOfWeek()}
+            <div className="day-date-label 
+                d-flex align-items-center justify-content-center 
+                badge bg-primary w-100">
+               {day} {dayOfWeek()}
             </div>
           
             <InstCalandarDay handleLessonDet={handleLessonDet}/>
@@ -100,9 +102,11 @@ const InstCalandarView = () => {
         );
    
     return (
-        <div className="app container-md block p-3">
+        <div className="app container py-3">
             
-            <div className="calendar-date-label row-12 d-flex justify-content-center">
+            <div className="calendar-date-label 
+                row-12 
+                d-flex justify-content-center">
                 <div className="col col-lg-1 col-sm-2 d-flex m-0 justify-content-end">
                     <button className='btn btn-secondary p-0 m-0 fs-4 w-25'
                         onClick={() =>{
@@ -114,25 +118,33 @@ const InstCalandarView = () => {
                         <p>&lt;</p>
                     </button>
                 </div>
-                <p className="col col-lg-2 col-md-3 col-4 badge bg-primary m-0 p-0 h-100 fs-3">
-                    {monthArr[month]} {year}
-                </p>
-                <div className='col col-lg-1 col-sm-2 d-flex m-0'>
-                    <button className='btn btn-secondary p-0 m-0 fs-4 w-25'
+                <div className="col col-lg-2 col-md-3 col-4
+                        d-flex justify-content-center align-items-center 
+                        badge bg-primary 
+                        fs-3">
+                    <p className='m-0'>
+                        {monthArr[month]} {year}
+                    </p>
+                </div>
+                <div className='col col-lg-1 col-sm-2 
+                    d-flex justify-content-start'>
+                    <button className='btn btn-secondary 
+                        p-0 m-0 fs-4 w-25'
                             onClick={() =>{
                                 dispatch(nextWeek(7))
                                 dispatchCheck = 1;
                                 return dispatchCheck;
                                 }}
                         >
-                        <p>&gt;</p>
+                        <p className='m-0'>&gt;</p>
                     </button>
                 </div>
             </div>
     
-            <div className="container  ">
-                <div className='calendar-container row overflow-auto'>
-                {weekDays}
+            <div className="container">
+                <div className='calendar-container row overflow-auto 
+                    d-flex justify-content-center'>
+                        {weekDays}
                 </div>
                 <div className="row">
                 <InstructorLessonDetail showLessonDet={showLessonDet}/>
