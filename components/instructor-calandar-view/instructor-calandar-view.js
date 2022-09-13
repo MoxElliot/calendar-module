@@ -84,7 +84,8 @@ const InstCalandarView = () => {
 
         return (
         <div 
-            className="col-md-3 col-xl border text-center p-2"
+            className="day-container
+                col-md-3 col-xl text-center p-2"
             key={day.toString()}
         >
             <div className="day-date-label 
@@ -102,12 +103,13 @@ const InstCalandarView = () => {
         );
    
     return (
-        <div className="app container py-3">
+        <div className="app container py-3 my-2">
             
             <div className="calendar-date-label 
                 row-12 
                 d-flex justify-content-center">
-                <div className="col col-lg-1 col-sm-2 d-flex m-0 justify-content-end">
+                <div className="col col-lg-1 col-sm-2 
+                    d-flex justify-content-end">
                     <button className='btn btn-secondary p-0 m-0 fs-4 w-25'
                         onClick={() =>{
                             dispatch(lastWeek())
@@ -146,7 +148,7 @@ const InstCalandarView = () => {
                     d-flex justify-content-center'>
                         {weekDays}
                 </div>
-                <div className="row">
+                <div className="row my-2">
                 <InstructorLessonDetail showLessonDet={showLessonDet}/>
                 </div>
             </div>
