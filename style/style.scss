@@ -19,33 +19,51 @@ a {
     padding: 0;
 }
 
-.calendar-date-label {
-  height: 5vh;
-  margin-bottom: 1rem;
-  
-}
-
-.day-date-label {
-  height: 3vh;
-  font-size: 1.2rem;
-}
-
-.lesson-details {
-  height: 40vh;
-  max-width: 50vh;
-  border: 1px solid black;
-}
-
-.calendar-container {
-  max-height: 50vh
-}
-
-.day-container {
-  border: 1px solid black;
-}
 
 .app {
-  min-width: 400px;
-  border: 1px solid black;
+  min-width: 500px;
+
+  .calendar-date-slider {
+    height: 5vh;
+    margin-bottom: 1rem;
+    min-width:400px;
+    
+    .calandar-date-label {
+      font-size:1.7rem;
+    }
+    .arrow-button {
+      font-size:1.5rem;
+    }
+    
+  }
+
+  .calendar-container {
+    max-height: 50vh;
+    border-bottom: 1px solid black;
+    margin: 0;
+    background-color: white;
+    padding: .25rem;
+    .day-container {
+      border: 1px solid black;
+      border-radius: 1rem;
+      max-width: 22%;
+      padding:.2rem;
+      margin-bottom: 1rem;
+      margin-right: 1px;
+      .day-date-label {
+        height: 3vh;
+        font-size: 1.2rem;
+      }
+     
+    }
+  }
+
+  .lesson-details {
+    height: 40vh;
+    max-width: 50vh;
+    border: 1px solid black;
+  
+  }
+
 }
 

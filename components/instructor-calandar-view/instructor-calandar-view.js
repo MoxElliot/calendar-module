@@ -7,6 +7,7 @@ import { nextWeek, lastWeek, advanceMonth, advanceYear } from '../../redux/slice
 
 
 const weekDaysArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const weekDaysShortArr = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
 const monthArr =['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'August', 'Sept', 'Oct', 'Nov', 'Dec']
 let dispatchCheck = 0
 
@@ -31,7 +32,7 @@ const InstCalandarView = () => {
     const year = useSelector(state => state.weekNav.year)
     const dispatch = useDispatch()
     
-    const weekDays = weekDaysArr.map((day) => {
+    const weekDays = weekDaysShortArr.map((day) => {
    
         const d = new Date();
         const dayNum = d.getDay()
@@ -84,13 +85,13 @@ const InstCalandarView = () => {
 
         return (
         <div 
-            className="day-container
-                col-md-3 col-xl text-center p-2"
+            className="day-container 
+                col-md-3 col-xl"
             key={day.toString()}
         >
             <div className="day-date-label 
                 d-flex align-items-center justify-content-center 
-                badge bg-primary w-100">
+                badge bg-primary">
                {day} {dayOfWeek()}
             </div>
           
@@ -103,14 +104,18 @@ const InstCalandarView = () => {
         );
    
     return (
-        <div className="app container py-3 my-2">
+        <div className="app 
+            container py-3
+            d-flex-column justify-content-center align-items-center
+            ">
             
-            <div className="calendar-date-label 
+            <div className="calendar-date-slider 
                 row-12 
                 d-flex justify-content-center">
                 <div className="col col-lg-1 col-sm-2 
                     d-flex justify-content-end">
-                    <button className='btn btn-secondary p-0 m-0 fs-4 w-25'
+                    <button className='arrow-button
+                        btn btn-secondary p-0 m-0'
                         onClick={() =>{
                             dispatch(lastWeek())
                             dispatchCheck = -1;
@@ -120,18 +125,19 @@ const InstCalandarView = () => {
                         <p>&lt;</p>
                     </button>
                 </div>
-                <div className="col col-lg-2 col-md-3 col-4
+                <div className="calandar-date-label
+                        col-1 col-lg-2 col-md-3 col-4
                         d-flex justify-content-center align-items-center 
-                        badge bg-primary 
-                        fs-3">
+                        badge bg-primary">
                     <p className='m-0'>
                         {monthArr[month]} {year}
                     </p>
                 </div>
                 <div className='col col-lg-1 col-sm-2 
                     d-flex justify-content-start'>
-                    <button className='btn btn-secondary 
-                        p-0 m-0 fs-4 w-25'
+                    <button className='arrow-button
+                        btn btn-secondary 
+                        p-0 m-0'
                             onClick={() =>{
                                 dispatch(nextWeek(7))
                                 dispatchCheck = 1;
@@ -142,16 +148,17 @@ const InstCalandarView = () => {
                     </button>
                 </div>
             </div>
-    
-            <div className="container">
-                <div className='calendar-container row overflow-auto 
-                    d-flex justify-content-center'>
-                        {weekDays}
-                </div>
-                <div className="row my-2">
-                <InstructorLessonDetail showLessonDet={showLessonDet}/>
-                </div>
+            <div className='calendar-container 
+                row overflow-scroll 
+                d-flex justify-content-center'>
+                    {weekDays}
             </div>
+
+            <div className="d-flex justify-content-center
+                row my-2">
+            <InstructorLessonDetail showLessonDet={showLessonDet}/>
+            </div>
+            
         </div>
         )
     }
