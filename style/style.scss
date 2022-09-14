@@ -9,17 +9,15 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 * {
     margin: 0;
     padding: 0;
 }
 
-
+a {
+  text-decoration: none;
+}
 .app {
   min-width: 370px;
 
@@ -52,11 +50,25 @@ a {
   }
 
   .lesson-details {
-    height: 40vh;
+    height: fit-content;
     max-width: 75vw;
     min-width: 280px;
     border: 1px solid black;
+    border-radius: 2rem;
+    padding:1rem;
+
+    .lesson-attachment{
+      border: 1px solid black;
+      border-radius: 1rem;
+      min-width:195px;
+    }
+    .lesson-detail {
+      margin:0 0 0 1rem;
+    }
   
+    .lesson-buttons {
+      min-width: 170px;
+    }
   }
 
 }
