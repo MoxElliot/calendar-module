@@ -91,7 +91,7 @@ const InstCalandarView = () => {
         >
             <div className="day-date-label 
                 d-flex align-items-center justify-content-center 
-                badge bg-primary">
+                badge bg-primary fs-6">
                {day} {dayOfWeek()}
             </div>
           
@@ -115,18 +115,19 @@ const InstCalandarView = () => {
                 <div className="col col-lg-1 col-sm-2 
                     d-flex justify-content-end">
                     <button className='arrow-button
-                        btn btn-secondary p-0 m-0'
+                        btn btn-secondary fs-4 fw-bold
+                        p-0 m-0'
                         onClick={() =>{
                             dispatch(lastWeek())
                             dispatchCheck = -1;
                             return dispatchCheck;
                             }}
                     >
-                        <p>&lt;</p>
+                        <i className="bi bi-caret-left-fill"></i>
                     </button>
                 </div>
                 <div className="calandar-date-label
-                        col-1 col-lg-2 col-md-3 col-4
+                        col-1 col-lg-2 col-md-3 col-4 fs-5 fs-md-3
                         d-flex justify-content-center align-items-center 
                         badge bg-primary">
                     <p className='m-0'>
@@ -136,15 +137,16 @@ const InstCalandarView = () => {
                 <div className='col col-lg-1 col-sm-2 
                     d-flex justify-content-start'>
                     <button className='arrow-button
-                        btn btn-secondary 
-                        p-0 m-0'
+                        btn btn-secondary fs-4 fw-bold
+                        p-0 m-0
+                        d-flex-column align-items-center '
                             onClick={() =>{
                                 dispatch(nextWeek(7))
                                 dispatchCheck = 1;
                                 return dispatchCheck;
                                 }}
                         >
-                        <p className='m-0'>&gt;</p>
+                        <i className="bi bi-caret-right-fill"></i> 
                     </button>
                 </div>
             </div>

@@ -21,19 +21,13 @@ a {
 
 
 .app {
-  min-width: 500px;
+  min-width: 370px;
 
   .calendar-date-slider {
     height: 5vh;
     margin-bottom: 1rem;
-    min-width:400px;
-    
-    .calandar-date-label {
-      font-size:1.7rem;
-    }
-    .arrow-button {
-      font-size:1.5rem;
-    }
+    min-width:370px;
+    min-height: 30px; 
     
   }
 
@@ -51,8 +45,7 @@ a {
       margin-bottom: 1rem;
       margin-right: 1px;
       .day-date-label {
-        height: 3vh;
-        font-size: 1.2rem;
+        min-height: 20px;
       }
      
     }
@@ -60,7 +53,8 @@ a {
 
   .lesson-details {
     height: 40vh;
-    max-width: 50vh;
+    max-width: 75vw;
+    min-width: 280px;
     border: 1px solid black;
   
   }

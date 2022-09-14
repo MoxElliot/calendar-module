@@ -40,3 +40,6 @@ connection string: mongodb+srv://eric0952:Eric5042@mongoatlascluster.5nkuq.mongo
 
 APIs with MONGODB for REDUX 
 https://medium.com/coding-artist/redux-from-scratch-chapter-7-building-an-api-service-with-express-js-mongodb-3bde96e1f45b
+
+**Firefox Developer Tips**
+Ctrl-Shift-M for responsive window
