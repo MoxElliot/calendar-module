@@ -36,21 +36,19 @@ a {
 
   .calendar-container {
     background-color: $calandar-background;
-    background: linear-gradient(to bottom, #92a8d1 85%, #7384a3 100%);
+    background: linear-gradient(to bottom, #92a8d1 95%, #7384a3 100%);
+    border-radius: 3rem;
     max-height: 50vh;
-   
     margin: 0;
-    padding: .25rem;
+    padding: .75rem;
     .day-container {
       background-color: $calandar-background;
-      border-radius: 1rem;
       max-width: 22%;
       padding:.2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       margin-right: 1px;
       .day-date-label {
-        min-height: 20px;
-        
+        min-height: 30px;
       }
      
     }

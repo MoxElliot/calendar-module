@@ -22,7 +22,7 @@ export default function InstructorLessonDetail({showLessonDet}) {
                 d-flex flex-column">
                 <h5 className='m-0'>Lesson Attachments</h5>
                 <button className='btn p-0'>
-                    <label className='px-2'>Add Attachment</label>
+                    <label className='bi bi-plus px-2'>Add Attachment</label>
                 </button>
                 <Link href="/">
                     <a className='bi bi-paperclip'>game-review.sgf</a>
