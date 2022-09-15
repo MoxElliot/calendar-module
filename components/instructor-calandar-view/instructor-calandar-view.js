@@ -90,7 +90,7 @@ const InstCalandarView = () => {
             key={day.toString()}
         >
             <div className="day-date-label 
-                d-flex align-items-center justify-content-center 
+                d-flex justify-content-center 
                 badge bg-primary fs-6">
                {day} {dayOfWeek()}
             </div>

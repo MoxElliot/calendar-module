@@ -32,15 +32,21 @@ export default function InstructorLessonDetail({showLessonDet}) {
                 </Link>
             </div>
             </div>
-            <div className="row">
-                <div className='col-8'>
-                    <button className='btn bi bi-pencil'>
-                        <label className='px-2'>Edit Lesson</label>
+            <div className="row p-0">
+                <div className='col-6 p-0'>
+                    <button className='lesson-buttons 
+                        d-flex justify-content-center
+                        btn  
+                        w-100 p-0'>
+                        <label className='bi bi-pencil px-2'>Edit Lesson</label>
                     </button>
                 </div>
-                <div className='col-8'>
-                    <button className='btn bi bi-trash '> 
-                        <label className='px-2'>Cancel Lesson</label>
+                <div className='col-6 p-0'>
+                    <button className='lesson-buttons 
+                        d-flex justify-content-center
+                        btn 
+                        w-100 p-0'> 
+                        <label className='bi bi-trash px-2'>Cancel Lesson</label>
                     </button>
                 </div>
             </div>
