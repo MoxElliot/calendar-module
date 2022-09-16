@@ -1,3 +1,6 @@
+**Test in localhost**
+npm run dev
+
 **Redux Toolkit**
 resources for configureStore, createReducer, createAction, CreateSlice
 https://redux-toolkit.js.org/introduction/getting-started

@@ -32,7 +32,7 @@ const InstCalandarView = () => {
     const year = useSelector(state => state.weekNav.year)
     const dispatch = useDispatch()
     
-    const weekDays = weekDaysShortArr.map((day) => {
+    const weekDays = weekDaysArr.map((day) => {
    
         const d = new Date();
         const dayNum = d.getDay()
@@ -45,17 +45,17 @@ const InstCalandarView = () => {
         }
         
         const dayOfWeek = () => {
-            let dateAdjust = ((weekDaysArr.indexOf(day) - dayNum) + baseDay)
+            const dateAdjust = ((weekDaysArr.indexOf(day) - dayNum) + baseDay)
 
             if (weekDaysArr.indexOf(day) === dayNum) {  // For today
-                let today = baseDay 
+                const today = baseDay 
                 if(today > daysInMonth(month)) {
                     today -= daysInMonth(month)
                 }
 
                 return today
             } else if (weekDaysArr.indexOf(day) > dayNum || baseDay > daysInMonth(month)) {  //For all days ahead of today
-                let daysAhead = dateAdjust
+                const daysAhead = dateAdjust
                 if (daysAhead > daysInMonth(month)) { //At the end of the month when the days ahead of today are in the next month
                     daysAhead = daysAhead - daysInMonth(month) //the month is accurate
 
@@ -63,7 +63,7 @@ const InstCalandarView = () => {
                 }
                 return daysAhead
             } else if (weekDaysArr.indexOf(day) < dayNum || baseDay < 0  ) { //For all days behind today
-                let daysBehind = dateAdjust
+                const daysBehind = dateAdjust
 
                 if (daysBehind <= 0) { //At the beginning of the month when the days behind today are in the last month 
                     daysBehind += daysInMonth(month-1) //the month is accurate so last month is -1
@@ -84,22 +84,21 @@ const InstCalandarView = () => {
         }, [baseDay]);
 
         return (
-        <div 
+            <div 
             className="day-container 
                 col-md-3 col-xl"
             key={day.toString()}
-        >
+            >
             <div className="day-date-label 
                 d-flex justify-content-center 
                 badge bg-primary fs-6">
                {day} {dayOfWeek()}
             </div>
-          
+            
             <InstCalandarDay handleLessonDet={handleLessonDet}/>
-        
-        </div>
-        )
-    }
+            
+            </div>)
+        }
         
         );
    

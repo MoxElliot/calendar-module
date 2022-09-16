@@ -1,10 +1,13 @@
 {
   "name": "calendar-appt-app",
+  "homepage": "https://moxelliot.github.io/calendar-module",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -30,6 +33,7 @@
   "devDependencies": {
     "@redux-devtools/core": "^3.13.1",
     "eslint": "8.19.0",
-    "eslint-config-next": "12.2.0"
+    "eslint-config-next": "12.2.0",
+    "gh-pages": "^4.0.0"
   }
 }
