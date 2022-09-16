@@ -31,19 +31,19 @@ const InstCalandarView = () => {
     const month = useSelector(state => state.weekNav.month)
     const year = useSelector(state => state.weekNav.year)
     const dispatch = useDispatch()
+
+    const d = new Date();
+    const dayNum = d.getDay()
+    const getDaysInMonth = (year, month) => {
+        return new Date(year, month, 0).getDate();
+    }
+
+    const daysInMonth = (m) => {
+        return getDaysInMonth(year, m + 1, 0)
+    }
     
     const weekDays = weekDaysArr.map((day) => {
    
-        const d = new Date();
-        const dayNum = d.getDay()
-        const getDaysInMonth = (year, month) => {
-            return new Date(year, month, 0).getDate();
-        }
-
-        const daysInMonth = (m) => {
-            return getDaysInMonth(year, m + 1, 0)
-        }
-
         useEffect(() => {
             if(baseDay > daysInMonth(month) && dispatchCheck > 0){ //month is accurate
                 dispatch(advanceMonth(1));
