@@ -48,7 +48,7 @@ const InstCalandarView = () => {
             dispatch(advanceYear(1));
             dispatchCheck=0;
         } 
-    }, [daysInMonth]);
+    });
     
     const weekDays = weekDaysArr.map((day) => {
    
