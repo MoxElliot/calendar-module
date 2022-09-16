@@ -3,7 +3,7 @@ import React, { useState, useEffect} from 'react';
 import InstCalandarDay from './instCal-day';
 import InstructorLessonDetail from '../instructor-lesson-detail/instructor-lesson-detail';
 import { useSelector, useDispatch } from 'react-redux';
-import { nextWeek, lastWeek, advanceMonth, advanceYear } from '../../redux/slices/weekNavSlice'
+import { nextWeek, lastWeek, advanceMonth, advanceYear, makeToday } from '../../redux/slices/weekNavSlice'
 
 
 const weekDaysArr = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -140,7 +140,7 @@ const InstCalandarView = () => {
                         p-0 m-0
                         d-flex-column align-items-center '
                             onClick={() =>{
-                                dispatch(nextWeek(7))
+                                dispatch(nextWeek(7));
                                 dispatchCheck = 1;
                                 return dispatchCheck;
                                 }}
@@ -149,8 +149,20 @@ const InstCalandarView = () => {
                     </button>
                 </div>
             </div>
+            <div className='today-button container'>
+                <div className='row-12 d-flex align-items-center justify-content-center'>
+                    <button className='btn btn-secondary 
+                        fs-6 fw-bold'
+                                onClick={() =>{
+                                    dispatch(makeToday());
+                                }}
+                        >
+                        Today
+                    </button>
+                </div>
+            </div>
             <div className='calendar-container 
-                row overflow-scroll 
+                row overflow-auto 
                 d-flex justify-content-center'>
                     {weekDays}
             </div>

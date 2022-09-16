@@ -28,10 +28,13 @@ a {
 
   .calendar-date-slider {
     height: 5vh;
-    margin-bottom: 1rem;
+    margin-bottom: .3rem;
     min-width:370px;
     min-height: 30px; 
     
+  }
+  .today-button {
+    margin-bottom: .7rem;
   }
 
   .calendar-container {
