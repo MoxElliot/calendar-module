@@ -43,7 +43,15 @@ const InstCalandarView = () => {
         const daysInMonth = (m) => {
             return getDaysInMonth(year, m + 1, 0)
         }
-        
+
+        useEffect(() => {
+            if(baseDay > daysInMonth(month) && dispatchCheck > 0){ //month is accurate
+                dispatch(advanceMonth(1));
+                dispatch(advanceYear(1));
+                dispatchCheck=0;
+            } 
+        }, [daysInMonth]);
+
         const dayOfWeek = () => {
             const dateAdjust = ((weekDaysArr.indexOf(day) - dayNum) + baseDay)
 
@@ -75,13 +83,7 @@ const InstCalandarView = () => {
         
         }
        
-        useEffect(() => {
-            if(baseDay > daysInMonth(month) && dispatchCheck > 0){ //month is accurate
-                dispatch(advanceMonth(1));
-                dispatch(advanceYear(1));
-                dispatchCheck=0;
-            } 
-        }, [baseDay]);
+        
 
         return (
             <div 
