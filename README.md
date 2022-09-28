@@ -32,7 +32,7 @@ Feedback and critique of this application and the code within is welcome. Please
 
 ## Deploy
 
-$ git clone https://example.com
+$ git clone https://github.com/MoxElliot/calendar-module 
 $ cd ../path/to/the/file
 $ npm install
-$ npm start
+$ npm run dev
