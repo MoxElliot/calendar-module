@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Table of Contents
+1. [General Info](#general-info)
+2. [Technologies](#technologies)
+3. [Collaboration](#collaboration)
 
-## Getting Started
+### General Info
+***
+This application is a weekly calendar with dynamic appointments for an online lesson platform (Calendar). This application is a feature-module for larger project that can be implimented within future applications. 
 
-First, run the development server:
+The Calendar can search forward in time, scroll back as the user needs, and accounts for leap years. The Calendar stops scrolling back at the present day to prevent any 'scheduling in the past' errors. 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+I chose to not use a React calendar library as a personal learning challenge.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The primary technology stack used on this project is: React, Redux, NextJS, Sass, and Bootstrap5.
+  
+## Technologies
+***
+A list of technologies used within the project:
+* [React]: Primarily classless implementation for ease of functional components to interact with state. Allows for future use of pre-built React libraries to streamline development. However, did not utilize any calendar libraries in this project.
+* [Redux]: State management tool. Utilized Redux Thunk to facilitate state slices and asycronous action use. This allows for better code abstraction and facilitates adding modules to the main code.
+* [NextJS]: Primarily classless Allows for ease of page routing to benefit modular development. Multiple pre-rendering forms keeps options open for future devlopment. asycronous action use. Pre-rendering ability also assits with end-user SEO optimiazation.
+* [Sass]: Streamlined and rich styling tool. Assists in modifying Bootstrap5 classes.
+* [NextJS]: Pre-defined classes allows for in-line styling, for a modern web design look and feel.
+## Collaboration
+***
+Feedback and critique of this application and the code within is welcome. Please connect through the github repo listed below.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> https://github.com/MoxElliot/calendar-module 
+> "A good friend will always stab you in the front."
+> - Oscar Wilde
