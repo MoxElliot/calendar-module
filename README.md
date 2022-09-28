@@ -2,6 +2,7 @@
 1. [General Info](#general-info)
 2. [Technologies](#technologies)
 3. [Collaboration](#collaboration)
+4. [Deploy](#deploy)
 
 ### General Info
 ***
@@ -28,3 +29,10 @@ Feedback and critique of this application and the code within is welcome. Please
 > https://github.com/MoxElliot/calendar-module 
 > "A good friend will always stab you in the front."
 > - Oscar Wilde
+
+## Deploy
+
+$ git clone https://example.com
+$ cd ../path/to/the/file
+$ npm install
+$ npm start
